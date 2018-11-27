@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Lechatonshop</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +13,135 @@
 
   
   <body>
+    <nav>
+      <div class="main-wrapper">
+
+    <!-- Header Section Start -->
+    <div class="header-section section">
+
+        <!-- Header Top Start -->
+        <div class="header-top header-top-one bg-theme-two">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center">
+
+                    <div class="col mt-10 mb-10 d-none d-md-flex">
+                        <!-- Header Top Left Start -->
+                        <div class="header-top-left">
+                            <p>Welcome to Jadusona</p>
+                            <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+                        </div><!-- Header Top Left End -->
+                    </div>
+
+                    <div class="col mt-10 mb-10">
+                        <!-- Header Language Currency Start -->
+                        <ul class="header-lan-curr">
+
+                            <li><a href="#">eng</a>
+                                <ul>
+                                    <li><a href="#">english</a></li>
+                                    <li><a href="#">spanish</a></li>
+                                    <li><a href="#">france</a></li>
+                                    <li><a href="#">russian</a></li>
+                                    <li><a href="#">chinese</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">$usd</a>
+                                <ul>
+                                    <li><a href="#">pound</a></li>
+                                    <li><a href="#">dollar</a></li>
+                                    <li><a href="#">euro</a></li>
+                                    <li><a href="#">yen</a></li>
+                                </ul>
+                            </li>
+
+                        </ul><!-- Header Language Currency End -->
+                    </div>
+
+                    <div class="col mt-10 mb-10">
+                        <!-- Header Shop Links Start -->
+                        <div class="header-top-right">
+
+                            <p><a href="#">My Account</a></p>
+                            <p><a href="login-register.html">Register</a><a href="login-register.html">Login</a></p>
+
+                        </div><!-- Header Shop Links End -->
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- Header Top End -->
+
+                <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky@">
+            <div class="container-fluid">
+                <div class="row menu-center align-items-center justify-content-between">
+
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="index.html">
+                              <%= image_tag("testimonial/logo.png") %>
+                              </a>
+                        </div><!-- Logo End -->
+                    </div>
+
+                    <div class="col order-2 order-lg-3">
+                        <!-- Header Advance Search Start -->
+                        <div class="header-shop-links">
+
+                            <div class="header-search">
+                                <button class="search-toggle"><%= image_tag("icons/search.png") %></button>
+                                <div class="header-search-wrap">
+                                    <form action="#">
+                                        <input type="text" placeholder="Type and hit enter">
+                                        <button><%= image_tag("icons/search.png") %></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="header-wishlist">
+                                <a href="wishlist.html"><%= image_tag("icons/wishlist.png") %><span>02</span></a>
+                            </div>
+
+                            <div class="header-mini-cart">
+                                <a href="cart.html"><%= image_tag("icons/cart.png") %><span>02($250)</span></a>
+                            </div>
+
+                        </div><!-- Header Advance Search End -->
+                    </div>
+
+                    <div class="col order-3 order-lg-2">
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                    <li class="active"><a href="index.html">HOME</a>
+                                    </li>
+                                    <li><a href="shop.html">SHOP</a>                                        
+                                    </li>
+                                    <li><a href="#">PAGES</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="login-register.html">Login & Register</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">CONTACT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+
+                </div>
+            </div>
+        </div><!-- Header BOttom End -->
+
+    </div><!-- Header Section End -->
+
+    </nav>
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
