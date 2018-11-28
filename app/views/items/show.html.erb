@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="page-banner-content col">
 
-                    <h1>Single Product</h1>
+                    <h1>La super photo de <%= @item.title %></h1>
                     <ul class="page-breadcrumb">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="single-product.html">Single Product</a></li>
@@ -66,17 +66,8 @@
 
                             <div class="pro-large-img mb-10 fix easyzoom easyzoom--overlay easyzoom--with-thumbnails">
                                 <%=image_tag ("#{@item.image_url}") %>
-                                <%= image_tag 'http://power.itp.ac.cn/~jmyang/funny/fun4.jpg' %>
-
                             </div>
-                            <!-- Single Product Thumbnail Slider -->
-                            <ul id="pro-thumb-img" class="pro-thumb-img">
-                                <li><a href="assets/images/product/product-zoom-1.jpg" data-standard="assets/images/product/product-big-1.jpg"><img src="assets/images/product/product-1.jpg" alt="" /></a></li>
-                                <li><a href="assets/images/product/product-zoom-2.jpg" data-standard="assets/images/product/product-big-2.jpg"><img src="assets/images/product/product-2.jpg" alt="" /></a></li>
-                                <li><a href="assets/images/product/product-zoom-3.jpg" data-standard="assets/images/product/product-big-3.jpg"><img src="assets/images/product/product-3.jpg" alt="" /></a></li>
-                                <li><a href="assets/images/product/product-zoom-4.jpg" data-standard="assets/images/product/product-big-4.jpg"><img src="assets/images/product/product-4.jpg" alt="" /></a></li>
-                                <li><a href="assets/images/product/product-zoom-5.jpg" data-standard="assets/images/product/product-big-5.jpg"><img src="assets/images/product/product-5.jpg" alt="" /></a></li>
-                            </ul>
+                            
                         </div>
 
                         <div class="col-lg-6 col-12 mb-40">
@@ -88,7 +79,7 @@
                                         <h3 class="title"> 
                                         	<p>
  											 <strong></strong>
- 											 <%= @item.title %>
+ 											 <h1><%= @item.title %></h1>
 											</p>
 										</h3>
 
@@ -97,13 +88,13 @@
                                     </div>
 
                                     <div class="head-right">
-                                        <span class="price">
+                                        <h2><span class="price">
                                     <p>
  									   <strong>Price:</strong>
   										<%= @item.price %>
 									</p>
 
-                                        </span>
+                                        </span></h2>
                                     </div>
                                 </div>
 
@@ -135,369 +126,11 @@
 
                     </div>
 
-                   
-                    <div class="row">
-
-                        <div class="section-title text-left col col mb-60 mb-sm-40 mb-xs-30">
-                            <h1>Related Product</h1>
-                        </div>
-
-                        <div class="related-product-slider related-product-slider-1 col-12 p-0">
-
-                            <div class="col">
-
-                                <div class="product-item">
-                                    <div class="product-inner">
-
-                                        <div class="image">
-                                        	<p>
-  												<strong></strong>
-  												
-											</p>
-                                           
-                                            
-                                                <div class="action-buttons">
-                                                    <button>add to cart</button>
-                                                </div>
-                                            
-
-                                        </div>
-
-                                        <div class="content">
-
-                                            <div class="content-left">
-
-                                                <h4 class="title"><a href="single-product.html">Tmart Baby Dress</a></h4>
-
-                                                <div class="ratting">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div>
-
-                                                <h5 class="size">Size: <span>S</span><span>M</span><span>L</span><span>XL</span></h5>
-                                                <h5 class="color">Color: <span style="background-color: #ffb2b0"></span><span style="background-color: #0271bc"></span><span style="background-color: #efc87c"></span><span style="background-color: #00c183"></span></h5>
-
-                                            </div>
-
-                                            <div class="content-right">
-                                                <span class="price">$25</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col">
-
-                                <div class="product-item">
-                                    <div class="product-inner">
-
-                                        <div class="image">
-                                            <img src="assets/images/product/product-2.jpg" alt="">
-
-                                            <div class="image-overlay">
-                                                <div class="action-buttons">
-                                                    <button>add to cart</button>
-                                                    <button>add to wishlist</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="content">
-
-                                            <div class="content-left">
-
-                                                <h4 class="title"><a href="single-product.html">Jumpsuit Outfits</a></h4>
-
-                                                <div class="ratting">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-
-                                                <h5 class="size">Size: <span>S</span><span>M</span><span>L</span><span>XL</span></h5>
-                                                <h5 class="color">Color: <span style="background-color: #ffb2b0"></span><span style="background-color: #0271bc"></span><span style="background-color: #efc87c"></span><span style="background-color: #00c183"></span></h5>
-
-                                            </div>
-
-                                            <div class="content-right">
-                                                <span class="price">$09</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col">
-
-                                <div class="product-item">
-                                    <div class="product-inner">
-
-                                        <div class="image">
-                                            <%= image_tag("product/product-3.jpg") %>
-
-                                            <div class="image-overlay">
-                                                <div class="action-buttons">
-                                                    <button>add to cart</button>
-                                                    <button>add to wishlist</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="content">
-
-                                            <div class="content-left">
-
-                                                <h4 class="title"><a href="single-product.html">Smart Shirt</a></h4>
-
-                                                <div class="ratting">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div>
-
-                                                <h5 class="size">Size: <span>S</span><span>M</span><span>L</span><span>XL</span></h5>
-                                                <h5 class="color">Color: <span style="background-color: #ffb2b0"></span><span style="background-color: #0271bc"></span><span style="background-color: #efc87c"></span><span style="background-color: #00c183"></span></h5>
-
-                                            </div>
-
-                                            <div class="content-right">
-                                                <span class="price">$18</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col">
-
-                                <div class="product-item">
-                                    <div class="product-inner">
-
-                                        <div class="image">
-                                            <img src="assets/images/product/product-4.jpg" alt="">
-
-                                            <div class="image-overlay">
-                                                <div class="action-buttons">
-                                                    <button>add to cart</button>
-                                                    <button>add to wishlist</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="content">
-
-                                            <div class="content-left">
-
-                                                <h4 class="title"><a href="single-product.html">Kids Shoe</a></h4>
-
-                                                <div class="ratting">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div>
-
-                                                <h5 class="size">Size: <span>S</span><span>M</span><span>L</span><span>XL</span></h5>
-                                                <h5 class="color">Color: <span style="background-color: #ffb2b0"></span><span style="background-color: #0271bc"></span><span style="background-color: #efc87c"></span><span style="background-color: #00c183"></span></h5>
-
-                                            </div>
-
-                                            <div class="content-right">
-                                                <span class="price">$15</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col">
-
-                                <div class="product-item">
-                                    <div class="product-inner">
-
-                                        <div class="image">
-                                            <img src="assets/images/product/product-5.jpg" alt="">
-
-                                            <div class="image-overlay">
-                                                <div class="action-buttons">
-                                                    <button>add to cart</button>
-                                                    <button>add to wishlist</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="content">
-
-                                            <div class="content-left">
-
-                                                <h4 class="title"><a href="single-product.html"> Bowknot Bodysuit</a></h4>
-
-                                                <div class="ratting">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-half-o"></i>
-                                                </div>
-
-                                                <h5 class="size">Size: <span>S</span><span>M</span><span>L</span><span>XL</span></h5>
-                                                <h5 class="color">Color: <span style="background-color: #ffb2b0"></span><span style="background-color: #0271bc"></span><span style="background-color: #efc87c"></span><span style="background-color: #00c183"></span></h5>
-
-                                            </div>
-
-                                            <div class="content-right">
-                                                <span class="price">$12</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
         </div>
     </div><!-- Page Section End -->
-
-    <!-- Brand Section Start -->
-    <div class="brand-section section mb-80 mb-lg-60 mb-md-60 mb-sm-60 mb-xs-40">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="brand-slider">
-
-                    <div class="brand-item col">
-                        <img src="assets/images/brands/brand-1.png" alt="">
-                    </div>
-
-                    <div class="brand-item col">
-                        <img src="assets/images/brands/brand-2.png" alt="">
-                    </div>
-
-                    <div class="brand-item col">
-                        <img src="assets/images/brands/brand-3.png" alt="">
-                    </div>
-
-                    <div class="brand-item col">
-                        <img src="assets/images/brands/brand-4.png" alt="">
-                    </div>
-
-                    <div class="brand-item col">
-                        <img src="assets/images/brands/brand-5.png" alt="">
-                    </div>
-
-                    <div class="brand-item col">
-                        <img src="assets/images/brands/brand-6.png" alt="">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div><!-- Brand Section End -->
-
-    <!-- Footer Top Section Start -->
-    <div class="footer-top-section section bg-theme-two-light pt-80 pt-lg-60 pt-md-60 pt-sm-60 pt-xs-40 pb-40 pb-lg-20 pb-md-20 pb-sm-20 pb-xs-0">
-        <div class="container">
-            <div class="row">
-
-                <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                    <h4 class="title">CONTACT US</h4>
-                    <p>You address will be here<br/> Lorem Ipsum text</p>
-                    <p><a href="tel:01234567890">01234 567 890</a><a href="tel:01234567891">01234 567 891</a></p>
-                    <p><a href="mailto:info@example.com">info@example.com</a><a href="#">www.example.com</a></p>
-                </div>
-
-                <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                    <h4 class="title">PRODUCTS</h4>
-                    <ul>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Seller</a></li>
-                        <li><a href="#">Trendy Items</a></li>
-                        <li><a href="#">Best Deals</a></li>
-                        <li><a href="#">On Sale Products</a></li>
-                        <li><a href="#">Featured Products</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                    <h4 class="title">INFORMATION</h4>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Payment Method</a></li>
-                        <li><a href="#">Product Warranty</a></li>
-                        <li><a href="#">Return Process</a></li>
-                        <li><a href="#">Payment Security</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
-                    <h4 class="title">NEWSLETTER</h4>
-                    <p>Subscribe our newsletter and get all update of our product</p>
-
-                    <form id="mc-form" class="mc-form footer-subscribe-form" novalidate="true">
-                        <input id="mc-email" autocomplete="off" placeholder="Enter your email here" name="EMAIL" type="email">
-                        <button id="mc-submit"><i class="fa fa-paper-plane-o"></i></button>
-                    </form>
-                    <!-- mailchimp-alerts Start -->
-                    <div class="mailchimp-alerts">
-                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                        <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                        <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                    </div><!-- mailchimp-alerts end -->
-
-                    <h5>FOLLOW US</h5> 
-                    <p class="footer-social"><a href="#">Facebook</a> - <a href="#">Twitter</a> - <a href="#">Google+</a></p>
-
-                </div>
-
-            </div>
-        </div>
-    </div><!-- Footer Top Section End -->
-
-    <!-- Footer Bottom Section Start -->
-    <div class="footer-bottom-section section bg-theme-two pt-15 pb-15">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <p class="footer-copyright">Copyright &copy; All rights reserved</p>
-                </div>
-            </div>
-        </div>
-    </div><!-- Footer Bottom Section End -->
-
-</div>
 
 <!-- JS
 ============================================ -->
