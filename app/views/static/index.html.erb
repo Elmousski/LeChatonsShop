@@ -40,19 +40,21 @@
             <div class="row">
                 <div class="section-title text-center col mb-30">
                     <h1>Nos produits</h1>
-                    <p>Toutes les meilleures photos de chatons au monde !</p>
+                    <p>Toutes les meilleures photos de chats au monde !</p>
                 </div>
             </div>
 
-            <div class="row">
+                           
 
+            <div class="row">
+            <% Item.all.each do |elem|%> 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
 
                     <div class="product-item">
                         <div class="product-inner">
-
+                               
                             <div class="image">
-                                <%= image_tag("product/product-1.jpg") %>
+                                <%=image_tag "#{elem.image_url}" , alt:"", class:"img-fluid", width:"60" %>
 
                                 <div class="image-overlay">
                                     <div class="action-buttons">
@@ -66,12 +68,14 @@
 
                                 <div class="content-left">
 
-                                    <h4 class="title"><a href="single-product.html">Tmart Baby Dress</a></h4>
+                                    <h4 class="title"> 
+
+                                        <%= link_to "#{elem.title}", item_path(elem.id) %></h4>
 
                                 </div>
 
                                 <div class="content-right">
-                                    <span class="price">$25</span>
+                                    <span class="price"><%= elem.price %></span>
                                 </div>
 
                             </div>
@@ -80,314 +84,11 @@
                     </div>
 
                 </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-2.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                   </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html">Jumpsuit Outfits</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$09</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-3.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html">Smart Shirt</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$18</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-4.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html">Kids Shoe</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$15</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-5.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html"> Bowknot Bodysuit</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$12</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-6.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html">Striped T-Shirt</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$12</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-7.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html">Kislen Jak Tops</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$29</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
-
-                    <div class="product-item">
-                        <div class="product-inner">
-
-                            <div class="image">
-                                <%= image_tag("product/product-8.jpg") %>
-
-                                <div class="image-overlay">
-                                    <div class="action-buttons">
-                                        <button>add to cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="content">
-
-                                <div class="content-left">
-
-                                    <h4 class="title"><a href="single-product.html">Lattic Shirt</a></h4>
-
-                                </div>
-
-                                <div class="content-right">
-                                    <span class="price">$08</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
+            <%end%>
             </div>
-
-        </div>
-    </div><!-- Product Section End -->
-
-
-    
-    
-
-    <!-- Blog Section Start -->
-    <div class="blog-section section mt-80 mt-lg-60 mt-md-60 mt-sm-60 mt-xs-40 mb-40 mb-lg-20 mb-md-20 mb-sm-20 mb-xs-0">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-xl-12 col-lg-5 col-12">
-
-                    <div class="row">
-                        <div class="section-title text-left col mb-30">
-                            <h1>CLIENTS REVIEW</h1>
-                            <p>Clients says about us</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-12 mb-40">
-                            <div class="testimonial-item">
-                                <p>I recomanded this shop all of you </p>
-                                <div class="testimonial-author">
-                                    <%= image_tag("testimonial/testimonial-1.png") %>
-                                    <div class="content">
-                                        <h4>Zacquline Smith</h4>
-                                        <p>Woman - 47 </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 mb-40">
-                            <div class="testimonial-item">
-                                <p>This is one of the most exclusive shop in the wold, where you can find pictures of cats that your want to buy. I recomanded this shop all of you</p>
-                                <div class="testimonial-author">
-                                    <%= image_tag("testimonial/testimonial-2.png") %>
-                                    <div class="content">
-                                        <h4>Nusaha Williams</h4>
-                                        <p> Girl - 19 </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div><!-- Blog Section End -->
-
    
-</div>
-
+        </div>
+    </div>    
 <!-- JS
 ============================================ -->
 
