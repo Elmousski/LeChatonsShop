@@ -1,3 +1,4 @@
 class Item < ApplicationRecord
-	has_many :carts
+	belongs_to :cart
+	belongs_to :product
 end
