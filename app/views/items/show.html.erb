@@ -65,7 +65,14 @@
                         <div class="col-lg-6 col-12 mb-40">
 
                             <div class="pro-large-img mb-10 fix easyzoom easyzoom--overlay easyzoom--with-thumbnails">
-                                <%=image_tag ("#{@item.image_url}") %>
+                              
+                                <% if @item.item_image.attached? %>
+                                <%= image_tag @item.item_image %>
+
+                                 <% else %>
+                                   <%=image_tag ("#{@item.image_url}") %>
+
+                                 <% end %>
                             </div>
                             
                         </div>
