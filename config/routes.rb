@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'static#contact'
   get '/checkout', to: 'static#checkout'
   get '/login_register', to: 'static#login_register'
+  resources :charges
 end
