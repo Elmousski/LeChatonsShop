@@ -2978,7 +2978,7 @@ img.mfp-img {
       float: right; }
       .single-product-content .head .head-right .price {
         display: block;
-        font-size: 24px;
+        font-size: 70px;
         font-weight: 600;
         color: #ff708a;
         font-family: "Dosis", sans-serif; }
@@ -4913,3 +4913,7 @@ img.mfp-img {
   line-height: 30px;
   color: #1a161e;
   margin: 0; }
+
+.leprix{
+  font-size: 40em;
+}
