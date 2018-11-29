@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Jadusona - eCommerce Baby shop Bootstrap4 Template - THEME SHARED ON THEMELOCK.COM</title>
+    <title>Jadusona - eCommerce Baby shop Bootstrap4</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -54,9 +54,19 @@
                         <div class="product-inner">
                                
                             <div class="image">
-                             <%=image_tag "#{elem.image_url}" , alt:"", class:"img-fluid", width:"60" %>
-        
-                            
+                     
+
+                                <% if elem.item_image.attached? %>
+                                <%= image_tag elem.item_image , alt:"", class:"img-fluid", width:"60" %>
+
+                                 <% else %>
+                                   <%=image_tag "#{elem.image_url}" , alt:"", class:"img-fluid", width:"60" %>
+
+                                 <% end %>
+
+
+
+
                                 <div class="image-overlay">
                                     <div class="action-buttons">
                                         <button>add to cart</button>
