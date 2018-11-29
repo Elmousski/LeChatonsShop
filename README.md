@@ -33,7 +33,7 @@ Cette semaine nous devions créer une application rails qui reprend le concept d
 
   2.3 - Lancer le fonctionnement en local :
   ```
-  $ rails serveur
+  $ rails server
   
 ```
 Puis dans ton navigateur va à l'adresses :
