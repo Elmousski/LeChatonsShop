@@ -4,7 +4,7 @@
 
 ## Bienvenue !
 
-Je te présente notre site de vente de cartes de chats très très mignon :D 
+Je te présente notre site de vente de cartes de chats très très mignons :D 
 Cette semaine nous devions créer une application rails qui reprend le concept d'un site e-commerce. 
 
 ## Pré-requis et installation :
@@ -36,7 +36,7 @@ Cette semaine nous devions créer une application rails qui reprend le concept d
   $ rails server
   
 ```
-Puis dans ton navigateur va à l'adresses :
+Puis dans ton navigateur va à l'adresse :
 ```
 @ http://localhost:3000/
 
