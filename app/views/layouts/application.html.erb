@@ -9,6 +9,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
 
   
@@ -36,8 +37,55 @@
                         <!-- Header Shop Links Start -->
                         <div class="header-top-right">
 
-                            <p><a href="/users/edit">My Account</a></p>
-                            <p><a href="/login_register">Register</a><a href="/login_register">Login</a></p>
+
+                        <!-- Module de login Start -->
+                                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                                    <li class="nav-item">
+                                                      <%= link_to "Sandbox App", root_path, class: "navbar-brand" %>
+                                                    </li>
+                                              <% unless user_signed_in? %>
+                                                    <li class="nav-item">
+                                                    <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+                                                    </li>
+                                              <% end %>
+                                      </ul>
+                                </div>
+                         <!-- Module de login End -->  
+
+
+                                            <% if user_signed_in? %>
+                                                    <div class="dropdown">
+                                                      <button class="dropbtn" onclick="myFunction()"><img class="rounded-circle" height="50px" width="50px" src="http://digitalspyuk.cdnds.net/17/25/320x320/square-1498216547-avatar-neytiri.jpg">
+                                                      <i class="fa fa-caret-down"></i></button>
+                                                        <div id="myDropdown" class="dropdown-content">
+                                                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                                                <li class="nav-item">
+                                                                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div> 
+                                                              <% else %>
+                                                      <div class="dropdown">        
+                                                        <button class="dropbtn" onclick="myFunction()">Connexion</button>
+                                                        <div id="myDropdown" class="dropdown-content">
+                                                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                                             <li class="nav-item">
+                                                                        <li class="nav-item">
+                                                                        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                                                                        </li>
+                                                                        <li class="nav-item">
+                                                                        <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+                                                                        </li>
+                                                            </ul>
+                                                        </div>
+                                                       </div>          
+
+                                            <% end %>     
+
+                            <!-- <p><a href="/users/edit">My Account</a></p>
+                            <p><a href="/login_register">Register</a><a href="/login_register">Login</a></p> -->
 
                         </div><!-- Header Shop Links End -->
                     </div>
@@ -45,7 +93,7 @@
                 </div>
             </div>
         </div><!-- Header Top End -->
-
+  
                 <!-- Header Bottom Start -->
         <div class="header-bottom header-bottom-one header-sticky@">
             <div class="container-fluid">
@@ -54,7 +102,7 @@
                     <div class="col mt-15 mb-15">
                         <!-- Logo Start -->
                         <div class="header-logo">
-                            <a href="index.html">
+                            <a href="/">
                               <%= image_tag("chat.jpg", width: 64, height: 64) %>
                               </a>
                         </div><!-- Logo End -->
@@ -73,14 +121,11 @@
                                     </form>
                                 </div>
                             </div>
-
-                            <div class="header-wishlist">
-                                <a href="wishlist.html"><%= image_tag("icons/wishlist.png") %><span>02</span></a>
-                            </div>
-
+                            <% if user_signed_in? %>
                             <div class="header-mini-cart">
                                 <a href="cart.html"><%= image_tag("icons/cart.png") %><span>02($250)</span></a>
                             </div>
+                            <% end %>
 
                         </div><!-- Header Advance Search End -->
                     </div>
@@ -113,12 +158,6 @@
     </div><!-- Header Section End -->
 
     </nav>
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
 
 
     <%= yield %>

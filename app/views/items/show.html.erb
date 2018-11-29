@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Jadusona - eCommerce Baby shop Bootstrap4 Template - THEME SHARED ON THEMELOCK.COM</title>
+    <title>chaaat</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -69,7 +69,14 @@
                         <div class="col-lg-6 col-12 mb-40">
 
                             <div class="pro-large-img mb-10 fix easyzoom easyzoom--overlay easyzoom--with-thumbnails">
-                                <%=image_tag ("#{@item.image_url}") %>
+                              
+                                <% if @item.item_image.attached? %>
+                                <%= image_tag @item.item_image %>
+
+                                 <% else %>
+                                   <%=image_tag ("#{@item.image_url}") %>
+
+                                 <% end %>
                             </div>
                             
                         </div>
@@ -81,19 +88,14 @@
                                 <div class="head">
                                     <div class="head-left">
 
-                                        <h3 class="title"> 
-                                        	<p>
- 											 <strong></strong>
- 											 <h1><%= @item.title %></h1>
-											</p>
-										</h3>
-
-                                  
+                                        <h3 class="title"><%= @item.title %></h3>
 
                                     </div>
 
                                     <div class="head-right">
-                                        <h2><span class="price"><p><strong>Prix: </strong><%= @item.price %> €</p></span></h2>
+
+                                        <span class="price"><%= @item.price %> €</span>
+
                                     </div>
                                 </div>
 
@@ -116,7 +118,9 @@
 
                                 <div class="actions">
 
-                                    <button><%= image_tag("icons/cart.png") %><span>ADD TO CART</span></button>
+                                    <% if user_signed_in? %>
+                                        <button><%= link_to (image_tag("icons/cart.png")), cart_path(@item), method: 'post' %><span>ADD TO CART</span></button>
+                                    <% end %>
                                    
                                 </div>
 

@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Jadusona - eCommerce Baby shop Bootstrap4 Template - THEME SHARED ON THEMELOCK.COM</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -41,6 +40,7 @@
 </br>
 </br>
 </br>
+</br>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -50,13 +50,13 @@
       </ol>
       <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <%=image_tag ("banner/chatbanner1.jpg"), class:"d-block w-100" %>              
+                  <%=image_tag ("banner/chat-banner1.jpg"), class:"d-block w-100" %>              
                 </div>
                 <div class="carousel-item">
-                  <%=image_tag ("banner/chatbanner2.jpg"), class:"d-block w-100" %>
+                  <%=image_tag ("banner/chat-banner2.jpg"), class:"d-block w-100" %>
                 </div>
                 <div class="carousel-item">
-                  <%=image_tag ("banner/chatbanner3.jpg"), class:"d-block w-100" %>
+                  <%=image_tag ("banner/chat-banner3.jpg"), class:"d-block w-100" %>
                 </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -93,7 +93,18 @@
                         <div class="product-inner">
                                
                             <div class="image">
-                                <%=image_tag "#{elem.image_url}" , alt:"", class:"img-fluid", width:"60" %>
+                     
+
+                                <% if elem.item_image.attached? %>
+                                <%= image_tag elem.item_image , alt:"", class:"img-fluid", width:"60" %>
+
+                                 <% else %>
+                                   <%=image_tag "#{elem.image_url}" , alt:"", class:"img-fluid", width:"60" %>
+
+                                 <% end %>
+
+
+
 
                                 <div class="image-overlay">
                                     <div class="action-buttons">
