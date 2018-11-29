@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' , to: 'static#index'
+  get '/' , to: 'static#index', as: 'root'
   devise_for :users 
   resources :items
   get '/cart', to: 'static#cart'

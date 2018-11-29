@@ -101,7 +101,9 @@
 
                                 <div class="actions">
 
-                                    <button><%= image_tag("icons/cart.png") %><span>ADD TO CART</span></button>
+                                    <% if user_signed_in? %>
+                                        <button><%= link_to (image_tag("icons/cart.png")), cart_path(@item), method: 'post' %><span>ADD TO CART</span></button>
+                                    <% end %>
                                    
                                 </div>
 
