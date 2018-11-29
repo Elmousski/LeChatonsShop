@@ -48,6 +48,8 @@ Puis dans ton navigateur va à l'adresse :
 * Dès qu'un utilisateur est connecté, un panier est créé 
 * Vous pouvez afficher les détails d'une photo en cliquant dessus
 * Vous pouvez retourner à la page index, choisir d'autres photos 
+* Cree de nouveau Item avec Active Storage 
+* Payer par stripe 
 
 # Le front : 
 
